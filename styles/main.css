@@ -1,0 +1,136 @@
+/* Set the background color of the entire page */
+body {
+    background-color: #000;
+    background-image: linear-gradient(to right, #fc00ff, #00dbde);
+    background-size: 400% auto; /* 4x width of the container */
+    animation: colorshift 10s ease infinite;
+  }
+  
+  @keyframes colorshift {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  
+  
+  
+  
+  /* Style the header */
+  header {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Style the title */
+  h2 {
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #00dbde;
+  }
+  
+  /* Style the container for the clock */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style the clock itself */
+  .digitalclock {
+    display: flex;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px #00dbde;
+  }
+  
+  /* Add spacing between day and hour */
+  #day {
+    margin-right: 0.3em;
+  }
+  
+  /* Style the colons */
+  #colon1,
+  #colon2 {
+    margin: 0 0.2em;
+  }
+  
+  /* Style the AMPM indicator */
+  #ampm {
+    font-size: 0.4em;
+    margin-left: 0.2em;
+  }
+  
+  /* Style the footer */
+  footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Style the copyright notice */
+  footer p {
+    font-size: 0.8em;
+    margin: 0;
+    text-shadow: 1px 1px #00dbde;
+  }
+  
+
+  
+  /* Animation keyframes for the colons */
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Set the container to a vertical flexbox */
+    .digitalclock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Remove the colons */
+    #colon1,
+    #colon2 {
+      display: none;
+    }
+    
+    /* Adjust spacing between items */
+    #day,
+    #hour,
+    #minute,
+    #second,
+    #ampm {
+      margin: 0.5em 0;
+    }
+    
+    /* Adjust font size and spacing for vertical orientation */
+    .digitalclock h3 {
+      font-size: 2.5em;
+      margin: 0.2em 0;
+    }
+    
+    /* Adjust spacing of AMPM indicator */
+    #ampm {
+      margin-top: 0.5em;
+    }
+
+    footer{
+      display:none;
+    }
+  }
+  
+
